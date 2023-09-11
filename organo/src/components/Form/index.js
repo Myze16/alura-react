@@ -1,8 +1,19 @@
 import './Form.css'
 
 import TextInput from "../TextInput/TextInput";
+import ListSuspended from '../ListSuspend';
 
 function Form() {
+    const teams = [
+        'Programação',
+        'Front-End',
+        'Data Science',
+        'Devops',
+        'UX e Design',
+        'Mobile',
+        'Inovação e Gestão'
+    ]
+
     return (
         <section className="form">
             <form>
@@ -13,6 +24,7 @@ function Form() {
                     label="Imagem"
                     placeholder="Digite o endereço da imagem..."
                 />
+                <ListSuspended label='Time' itens={teams} />
             </form>
         </section>
     );
